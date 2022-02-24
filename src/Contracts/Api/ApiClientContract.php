@@ -1,6 +1,6 @@
 <?php
 
-namespace Mrbeaver1\Selectel\CloudStorage\Contracts\Api;
+namespace MrBeaver1\Selectel\CloudStorage\Contracts\Api;
 
 use GuzzleHttp\ClientInterface;
 
@@ -11,7 +11,7 @@ interface ApiClientContract
      *
      * @param \GuzzleHttp\ClientInterface $httpClient
      *
-     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
+     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
      */
     public function setHttpClient(ClientInterface $httpClient);
 

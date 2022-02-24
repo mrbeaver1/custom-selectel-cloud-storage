@@ -1,6 +1,6 @@
 <?php
 
-namespace Mrbeaver1\Selectel\CloudStorage\Contracts;
+namespace MrBeaver1\Selectel\CloudStorage\Contracts;
 
 interface FluentFilesLoaderContract
 {
@@ -9,7 +9,7 @@ interface FluentFilesLoaderContract
      *
      * @param string $directory
      *
-     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     public function fromDirectory($directory);
 
@@ -18,7 +18,7 @@ interface FluentFilesLoaderContract
      *
      * @param string $prefix
      *
-     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     public function withPrefix($prefix);
 
@@ -27,7 +27,7 @@ interface FluentFilesLoaderContract
      *
      * @param string $delimiter
      *
-     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     public function withDelimiter($delimiter);
 
@@ -37,14 +37,14 @@ interface FluentFilesLoaderContract
      * @param int    $limit
      * @param string $markerFile = ''
      *
-     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     public function limit($limit, $markerFile = '');
 
     /**
      * Loads all available files from container.
      *
-     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract
+     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract
      */
     public function all();
 
@@ -62,14 +62,14 @@ interface FluentFilesLoaderContract
      *
      * @param string $path
      *
-     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FileContract
+     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\FileContract
      */
     public function find($path);
 
     /**
      * Loads files.
      *
-     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract
+     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract
      */
     public function get();
 }
