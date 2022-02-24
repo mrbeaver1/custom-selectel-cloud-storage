@@ -1,6 +1,6 @@
 <?php
 
-namespace mrbeaver1\Selectel\CloudStorage\Contracts;
+namespace Mrbeaver1\Selectel\CloudStorage\Contracts;
 
 interface FileContract
 {
@@ -106,7 +106,7 @@ interface FileContract
      *
      * @throws \LogicException
      * @throws \InvalidArgumentException
-     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
      * @return string
      */
@@ -128,7 +128,7 @@ interface FileContract
      * Deletes file.
      *
      * @throws \LogicException
-     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      */
     public function delete();
 }

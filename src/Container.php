@@ -1,30 +1,30 @@
 <?php
 
-namespace mrbeaver1\Selectel\CloudStorage;
+namespace Mrbeaver1\Selectel\CloudStorage;
 
 use Countable;
 use JsonSerializable;
-use mrbeaver1\Selectel\CloudStorage\Traits\MetaData;
-use mrbeaver1\Selectel\CloudStorage\Contracts\HasMetaData;
-use mrbeaver1\Selectel\CloudStorage\Traits\FilesTransformer;
-use mrbeaver1\Selectel\CloudStorage\Contracts\ContainerContract;
-use mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
-use mrbeaver1\Selectel\CloudStorage\Contracts\FilesTransformerContract;
-use mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
+use Mrbeaver1\Selectel\CloudStorage\Traits\MetaData;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\HasMetaData;
+use Mrbeaver1\Selectel\CloudStorage\Traits\FilesTransformer;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\ContainerContract;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\FilesTransformerContract;
+use Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
 
 class Container implements ContainerContract, FilesTransformerContract, Countable, JsonSerializable, HasMetaData
 {
     use FilesTransformer, MetaData;
 
     /**
-     * @var \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
+     * @var \Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
      */
     protected $api;
 
     /**
      * File uploader.
      *
-     * @var \mrbeaver1\Selectel\CloudStorage\Contracts\FileUploaderContract
+     * @var \Mrbeaver1\Selectel\CloudStorage\Contracts\FileUploaderContract
      */
     protected $uploader;
 
@@ -57,10 +57,10 @@ class Container implements ContainerContract, FilesTransformerContract, Countabl
     protected $url;
 
     /**
-     * @param \ArgentCrusade\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
-     * @param \ArgentCrusade\Selectel\CloudStorage\FileUploader                    $uploader
-     * @param string                                                               $name
-     * @param array                                                                $data
+     * @param \Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
+     * @param \Mrbeaver1\Selectel\CloudStorage\FileUploader                    $uploader
+ * @param string                                                               $name
+ * @param array                                                                $data
      */
     public function __construct(ApiClientContract $api, FileUploader $uploader, $name, array $data = [])
     {
@@ -92,7 +92,7 @@ class Container implements ContainerContract, FilesTransformerContract, Countabl
     /**
      * Container data lazy loader.
      *
-     * @throws \ArgentCrusade\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      */
     protected function loadContainerData()
     {
@@ -150,7 +150,7 @@ class Container implements ContainerContract, FilesTransformerContract, Countabl
     /**
      * API Client.
      *
-     * @return \ArgentCrusade\Selectel\CloudStorage\Contracts\Api\ApiClientContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
      */
     public function apiClient()
     {
@@ -271,7 +271,7 @@ class Container implements ContainerContract, FilesTransformerContract, Countabl
      *
      * @param string $type Container type: 'public', 'private' or 'gallery'.
      *
-     * @throws \ArgentCrusade\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
      * @return string
      */
@@ -311,7 +311,7 @@ class Container implements ContainerContract, FilesTransformerContract, Countabl
     /**
      * Creates new Fluent files loader instance.
      *
-     * @return \ArgentCrusade\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     public function files()
     {
@@ -323,7 +323,7 @@ class Container implements ContainerContract, FilesTransformerContract, Countabl
      *
      * @param string $name Directory name.
      *
-     * @throws \ArgentCrusade\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
      * @return string
      */
@@ -347,7 +347,7 @@ class Container implements ContainerContract, FilesTransformerContract, Countabl
      *
      * @param string $name Directory name.
      *
-     * @throws \ArgentCrusade\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
      * @return bool
      */
@@ -370,7 +370,7 @@ class Container implements ContainerContract, FilesTransformerContract, Countabl
      * @param array  $params         = [] Upload params.
      * @param bool   $verifyChecksum = true
      *
-     * @throws \ArgentCrusade\Selectel\CloudStorage\Exceptions\UploadFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\UploadFailedException
      *
      * @return string
      */
@@ -386,7 +386,7 @@ class Container implements ContainerContract, FilesTransformerContract, Countabl
      * @param resource $resource Stream resource.
      * @param array    $params   = [] Upload params.
      *
-     * @throws \ArgentCrusade\Selectel\CloudStorage\Exceptions\UploadFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\UploadFailedException
      *
      * @return string
      */
@@ -398,7 +398,7 @@ class Container implements ContainerContract, FilesTransformerContract, Countabl
     /**
      * Deletes container. Container must be empty in order to perform this operation.
      *
-     * @throws \ArgentCrusade\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      */
     public function delete()
     {

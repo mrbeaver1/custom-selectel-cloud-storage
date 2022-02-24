@@ -1,14 +1,14 @@
 <?php
 
-namespace mrbeaver1\Selectel\CloudStorage;
+namespace Mrbeaver1\Selectel\CloudStorage;
 
-use mrbeaver1\Selectel\CloudStorage\Collections\Collection;
-use mrbeaver1\Selectel\CloudStorage\Traits\FilesTransformer;
-use mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
-use mrbeaver1\Selectel\CloudStorage\Exceptions\FileNotFoundException;
-use mrbeaver1\Selectel\CloudStorage\Contracts\FilesTransformerContract;
-use mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract;
-use mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
+use Mrbeaver1\Selectel\CloudStorage\Collections\Collection;
+use Mrbeaver1\Selectel\CloudStorage\Traits\FilesTransformer;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
+use Mrbeaver1\Selectel\CloudStorage\Exceptions\FileNotFoundException;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\FilesTransformerContract;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract;
+use Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
 
 class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerContract
 {
@@ -17,7 +17,7 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
     /**
      * API Client.
      *
-     * @var \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
+     * @var \Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
      */
     protected $api;
 
@@ -57,7 +57,7 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
     protected $asFileObjects = false;
 
     /**
-     * @param \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
+     * @param \Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
      * @param string                                                               $container
      * @param string                                                               $containerUrl
      */
@@ -75,7 +75,7 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
      * @param string|int $value
      * @param bool       $trimLeadingSlashes = true
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     protected function setParam($key, $value, $trimLeadingSlashes = true)
     {
@@ -87,7 +87,7 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
     /**
      * API Client.
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
      */
     public function apiClient()
     {
@@ -110,7 +110,7 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
      *
      * @param string $directory
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     public function fromDirectory($directory)
     {
@@ -124,7 +124,7 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
      *
      * @param string $prefix
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     public function withPrefix($prefix)
     {
@@ -136,7 +136,7 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
      *
      * @param string $delimiter
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     public function withDelimiter($delimiter)
     {
@@ -151,7 +151,7 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
      * @param int    $limit
      * @param string $markerFile = ''
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     public function limit($limit, $markerFile = '')
     {
@@ -162,7 +162,7 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
     /**
      * Tells builder to return Collection of File objects instead of arrays.
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     public function asFileObjects()
     {
@@ -174,9 +174,9 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
     /**
      * Loads all available files from container.
      *
-     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract
      */
     public function all()
     {
@@ -204,9 +204,9 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
      *
      * @param string $path
      *
-     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\FileNotFoundException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\FileNotFoundException
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\FileContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FileContract
      */
     public function find($path)
     {
@@ -244,9 +244,9 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
     /**
      * Loads files.
      *
-     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract
      */
     public function get()
     {
@@ -305,7 +305,7 @@ class FluentFilesLoader implements FluentFilesLoaderContract, FilesTransformerCo
      * @param string $key
      * @param bool   $dropPath = false
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     protected function appendPathToParam($key, $dropPath = false)
     {

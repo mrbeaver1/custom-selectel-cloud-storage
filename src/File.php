@@ -1,19 +1,19 @@
 <?php
 
-namespace mrbeaver1\Selectel\CloudStorage;
+namespace Mrbeaver1\Selectel\CloudStorage;
 
 use LogicException;
 use JsonSerializable;
 use InvalidArgumentException;
 use GuzzleHttp\Psr7\StreamWrapper;
-use mrbeaver1\Selectel\CloudStorage\Contracts\FileContract;
-use mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
-use mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\FileContract;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
+use Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
 
 class File implements FileContract, JsonSerializable
 {
     /**
-     * @var \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
+     * @var \Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
      */
     protected $api;
 
@@ -39,7 +39,7 @@ class File implements FileContract, JsonSerializable
     protected $deleted = false;
 
     /**
-     * @param \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
+     * @param \Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
      * @param string                                                               $container
      * @param array                                                                $data
      */
@@ -232,7 +232,7 @@ class File implements FileContract, JsonSerializable
      *
      * @throws \LogicException
      * @throws \InvalidArgumentException
-     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
      * @return string
      */
@@ -314,7 +314,7 @@ class File implements FileContract, JsonSerializable
      * Deletes file.
      *
      * @throws \LogicException
-     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      */
     public function delete()
     {

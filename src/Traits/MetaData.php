@@ -1,10 +1,10 @@
 <?php
 
-namespace mrbeaver1\Selectel\CloudStorage\Traits;
+namespace Mrbeaver1\Selectel\CloudStorage\Traits;
 
 use InvalidArgumentException;
 use Psr\Http\Message\ResponseInterface;
-use mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
+use Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
 
 trait MetaData
 {
@@ -21,7 +21,7 @@ trait MetaData
     /**
      * API Client.
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
      */
     abstract public function apiClient();
 
@@ -133,7 +133,7 @@ trait MetaData
      *
      * @param array $meta Array of meta data (without "X-{Object}-Meta" prefixes).
      *
-     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
      * @return bool
      */

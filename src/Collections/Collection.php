@@ -1,12 +1,12 @@
 <?php
 
-namespace mrbeaver1\Selectel\CloudStorage\Collections;
+namespace Mrbeaver1\Selectel\CloudStorage\Collections;
 
 use Iterator;
 use Countable;
 use ArrayAccess;
 use JsonSerializable;
-use mrbeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract;
 
 class Collection implements CollectionContract, ArrayAccess, Countable, Iterator, JsonSerializable
 {

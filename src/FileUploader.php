@@ -1,23 +1,23 @@
 <?php
 
-namespace mrbeaver1\Selectel\CloudStorage;
+namespace Mrbeaver1\Selectel\CloudStorage;
 
-use mrbeaver1\Selectel\CloudStorage\Contracts\FileUploaderContract;
-use mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
-use mrbeaver1\Selectel\CloudStorage\Exceptions\UploadFailedException;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\FileUploaderContract;
+use Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
+use Mrbeaver1\Selectel\CloudStorage\Exceptions\UploadFailedException;
 
 class FileUploader implements FileUploaderContract
 {
     /**
      * Upload file from string or stream resource.
      *
-     * @param \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
+     * @param \Mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
      * @param string                                                               $path           Remote path.
      * @param string|resource                                                      $body           File contents.
      * @param array                                                                $params         = [] Upload params.
      * @param bool                                                                 $verifyChecksum = true
      *
-     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\UploadFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\UploadFailedException
      *
      * @return string
      */

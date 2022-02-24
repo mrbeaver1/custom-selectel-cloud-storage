@@ -1,6 +1,6 @@
 <?php
 
-namespace mrbeaver1\Selectel\CloudStorage\Contracts;
+namespace Mrbeaver1\Selectel\CloudStorage\Contracts;
 
 interface CloudStorageContract
 {
@@ -10,9 +10,9 @@ interface CloudStorageContract
      * @param int    $limit  = 10000
      * @param string $marker = ''
      *
-     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract
      */
     public function containers($limit = 10000, $marker = '');
 
@@ -21,7 +21,7 @@ interface CloudStorageContract
      *
      * @param string $name
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\ContainerContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\ContainerContract
      */
     public function getContainer($name);
 
@@ -32,9 +32,9 @@ interface CloudStorageContract
      * @param string $type
      *
      * @throws \InvalidArgumentException
-     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \Mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
-     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\ContainerContract
+     * @return \Mrbeaver1\Selectel\CloudStorage\Contracts\ContainerContract
      */
     public function createContainer($name, $type = 'public');
 }
