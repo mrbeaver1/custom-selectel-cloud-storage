@@ -1,13 +1,13 @@
 <?php
 
-namespace ArgentCrusade\Selectel\CloudStorage\Api;
+namespace mrbeaver1\Selectel\CloudStorage\Api;
 
 use RuntimeException;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
-use ArgentCrusade\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
-use ArgentCrusade\Selectel\CloudStorage\Exceptions\AuthenticationFailedException;
+use mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
+use mrbeaver1\Selectel\CloudStorage\Exceptions\AuthenticationFailedException;
 
 class ApiClient implements ApiClientContract
 {
@@ -65,7 +65,7 @@ class ApiClient implements ApiClientContract
      *
      * @param \GuzzleHttp\ClientInterface $httpClient
      *
-     * @return \ArgentCrusade\Selectel\CloudStorage\Contracts\Api\ApiClientContract
+     * @return \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
      */
     public function setHttpClient(ClientInterface $httpClient)
     {
@@ -126,7 +126,7 @@ class ApiClient implements ApiClientContract
     /**
      * Performs authentication request.
      *
-     * @throws \ArgentCrusade\Selectel\CloudStorage\Exceptions\AuthenticationFailedException
+     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\AuthenticationFailedException
      * @throws \RuntimeException
      */
     public function authenticate()
@@ -152,7 +152,7 @@ class ApiClient implements ApiClientContract
     /**
      * Performs authentication request and returns its response.
      *
-     * @throws \ArgentCrusade\Selectel\CloudStorage\Exceptions\AuthenticationFailedException
+     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\AuthenticationFailedException
      *
      * @return \Psr\Http\Message\ResponseInterface
      */

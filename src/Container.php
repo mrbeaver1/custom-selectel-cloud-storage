@@ -1,30 +1,30 @@
 <?php
 
-namespace ArgentCrusade\Selectel\CloudStorage;
+namespace mrbeaver1\Selectel\CloudStorage;
 
 use Countable;
 use JsonSerializable;
-use ArgentCrusade\Selectel\CloudStorage\Traits\MetaData;
-use ArgentCrusade\Selectel\CloudStorage\Contracts\HasMetaData;
-use ArgentCrusade\Selectel\CloudStorage\Traits\FilesTransformer;
-use ArgentCrusade\Selectel\CloudStorage\Contracts\ContainerContract;
-use ArgentCrusade\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
-use ArgentCrusade\Selectel\CloudStorage\Contracts\FilesTransformerContract;
-use ArgentCrusade\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
+use mrbeaver1\Selectel\CloudStorage\Traits\MetaData;
+use mrbeaver1\Selectel\CloudStorage\Contracts\HasMetaData;
+use mrbeaver1\Selectel\CloudStorage\Traits\FilesTransformer;
+use mrbeaver1\Selectel\CloudStorage\Contracts\ContainerContract;
+use mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
+use mrbeaver1\Selectel\CloudStorage\Contracts\FilesTransformerContract;
+use mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
 
 class Container implements ContainerContract, FilesTransformerContract, Countable, JsonSerializable, HasMetaData
 {
     use FilesTransformer, MetaData;
 
     /**
-     * @var \ArgentCrusade\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
+     * @var \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
      */
     protected $api;
 
     /**
      * File uploader.
      *
-     * @var \ArgentCrusade\Selectel\CloudStorage\Contracts\FileUploaderContract
+     * @var \mrbeaver1\Selectel\CloudStorage\Contracts\FileUploaderContract
      */
     protected $uploader;
 

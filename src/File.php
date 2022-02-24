@@ -1,19 +1,19 @@
 <?php
 
-namespace ArgentCrusade\Selectel\CloudStorage;
+namespace mrbeaver1\Selectel\CloudStorage;
 
 use LogicException;
 use JsonSerializable;
 use InvalidArgumentException;
 use GuzzleHttp\Psr7\StreamWrapper;
-use ArgentCrusade\Selectel\CloudStorage\Contracts\FileContract;
-use ArgentCrusade\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
-use ArgentCrusade\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
+use mrbeaver1\Selectel\CloudStorage\Contracts\FileContract;
+use mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
+use mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
 
 class File implements FileContract, JsonSerializable
 {
     /**
-     * @var \ArgentCrusade\Selectel\CloudStorage\Contracts\Api\ApiClientContract
+     * @var \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
      */
     protected $api;
 
@@ -39,7 +39,7 @@ class File implements FileContract, JsonSerializable
     protected $deleted = false;
 
     /**
-     * @param \ArgentCrusade\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
+     * @param \mrbeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
      * @param string                                                               $container
      * @param array                                                                $data
      */
@@ -232,7 +232,7 @@ class File implements FileContract, JsonSerializable
      *
      * @throws \LogicException
      * @throws \InvalidArgumentException
-     * @throws \ArgentCrusade\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
      * @return string
      */
@@ -314,7 +314,7 @@ class File implements FileContract, JsonSerializable
      * Deletes file.
      *
      * @throws \LogicException
-     * @throws \ArgentCrusade\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \mrbeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      */
     public function delete()
     {
