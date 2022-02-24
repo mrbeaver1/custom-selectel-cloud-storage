@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ArgentCrusade\\Selectel\\CloudStorage\\": "src/"
+            "mrbeaver1\\Selectel\\CloudStorage\\": "src/"
         }
     },
     "autoload-dev": {
