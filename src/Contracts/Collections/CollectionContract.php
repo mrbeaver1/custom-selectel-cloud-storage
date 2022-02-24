@@ -1,6 +1,6 @@
 <?php
 
-namespace MrBeaver1\Selectel\CloudStorage\Contracts\Collections;
+namespace MrBeaver\Selectel\CloudStorage\Contracts\Collections;
 
 interface CollectionContract
 {

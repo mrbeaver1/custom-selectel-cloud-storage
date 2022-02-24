@@ -1,6 +1,6 @@
 <?php
 
-namespace MrBeaver1\Selectel\CloudStorage\Contracts;
+namespace MrBeaver\Selectel\CloudStorage\Contracts;
 
 interface HasMetaData
 {
@@ -29,7 +29,7 @@ interface HasMetaData
      *
      * @param array $meta Array of meta data (without "X-{Object}-Meta" prefixes).
      *
-     * @throws \MrBeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \MrBeaver\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
      * @return bool
      */

@@ -1,33 +1,33 @@
 <?php
 
-namespace MrBeaver1\Selectel\CloudStorage;
+namespace MrBeaver\Selectel\CloudStorage;
 
 use InvalidArgumentException;
-use MrBeaver1\Selectel\CloudStorage\Collections\Collection;
-use MrBeaver1\Selectel\CloudStorage\Contracts\CloudStorageContract;
-use MrBeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
-use MrBeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
+use MrBeaver\Selectel\CloudStorage\Collections\Collection;
+use MrBeaver\Selectel\CloudStorage\Contracts\CloudStorageContract;
+use MrBeaver\Selectel\CloudStorage\Contracts\Api\ApiClientContract;
+use MrBeaver\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
 
 class CloudStorage implements CloudStorageContract
 {
     /**
      * API Client instance.
      *
-     * @var \MrBeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract
+     * @var \MrBeaver\Selectel\CloudStorage\Contracts\Api\ApiClientContract
      */
     protected $api;
 
     /**
      * File uploader.
      *
-     * @var \MrBeaver1\Selectel\CloudStorage\FileUploader
+     * @var \MrBeaver\Selectel\CloudStorage\FileUploader
      */
     protected $uploader;
 
     /**
      * Creates new instance.
      *
-     * @param \MrBeaver1\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
+     * @param \MrBeaver\Selectel\CloudStorage\Contracts\Api\ApiClientContract $api
      */
     public function __construct(ApiClientContract $api)
     {
@@ -41,9 +41,9 @@ class CloudStorage implements CloudStorageContract
      * @param int    $limit  = 10000
      * @param string $marker = ''
      *
-     * @throws \MrBeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \MrBeaver\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
-     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\Collections\CollectionContract
+     * @return \MrBeaver\Selectel\CloudStorage\Contracts\Collections\CollectionContract
      */
     public function containers($limit = 10000, $marker = '')
     {
@@ -68,7 +68,7 @@ class CloudStorage implements CloudStorageContract
      *
      * @param string $name
      *
-     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\ContainerContract
+     * @return \MrBeaver\Selectel\CloudStorage\Contracts\ContainerContract
      */
     public function getContainer($name)
     {
@@ -82,9 +82,9 @@ class CloudStorage implements CloudStorageContract
      * @param string $type
      *
      * @throws \InvalidArgumentException
-     * @throws \MrBeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \MrBeaver\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
-     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\ContainerContract
+     * @return \MrBeaver\Selectel\CloudStorage\Contracts\ContainerContract
      */
     public function createContainer($name, $type = 'public')
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace MrBeaver1\Selectel\CloudStorage\Contracts;
+namespace MrBeaver\Selectel\CloudStorage\Contracts;
 
 interface FilesTransformerContract
 {
@@ -9,7 +9,7 @@ interface FilesTransformerContract
      *
      * @param array $file File array.
      *
-     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\FileContract
+     * @return \MrBeaver\Selectel\CloudStorage\Contracts\FileContract
      */
     public function getFileFromArray(array $file);
 
@@ -17,9 +17,9 @@ interface FilesTransformerContract
      * Transforms Collection of file arrays (or plain array) to Collection of File objects.
      * Warning: converting a lot of files to `File` instances may result in performance loss.
      *
-     * @param array|\MrBeaver1\Selectel\CloudStorage\Collections\Collection $files
+     * @param array|\MrBeaver\Selectel\CloudStorage\Collections\Collection $files
      *
-     * @return \MrBeaver1\Selectel\CloudStorage\Collections\Collection
+     * @return \MrBeaver\Selectel\CloudStorage\Collections\Collection
      */
     public function getFilesCollectionFromArrays($files);
 }

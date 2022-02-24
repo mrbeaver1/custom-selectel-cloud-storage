@@ -1,6 +1,6 @@
 <?php
 
-namespace MrBeaver1\Selectel\CloudStorage\Contracts;
+namespace MrBeaver\Selectel\CloudStorage\Contracts;
 
 interface ContainerContract
 {
@@ -60,7 +60,7 @@ interface ContainerContract
      *
      * @param string $type Container type, 'public', 'private' or 'gallery'.
      *
-     * @throws \MrBeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \MrBeaver\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
      * @return string
      */
@@ -71,7 +71,7 @@ interface ContainerContract
      *
      * @param array $meta Array of meta data (without "X-Container-Meta" prefixes).
      *
-     * @throws \MrBeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \MrBeaver\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
      * @return bool
      */
@@ -80,7 +80,7 @@ interface ContainerContract
     /**
      * Creates new Fluent files loader instance.
      *
-     * @return \MrBeaver1\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
+     * @return \MrBeaver\Selectel\CloudStorage\Contracts\FluentFilesLoaderContract
      */
     public function files();
 
@@ -89,7 +89,7 @@ interface ContainerContract
      *
      * @param string $name Directory name.
      *
-     * @throws \MrBeaver1\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
+     * @throws \MrBeaver\Selectel\CloudStorage\Exceptions\ApiRequestFailedException
      *
      * @return string
      */
@@ -110,7 +110,7 @@ interface ContainerContract
      * @param array  $params         = []
      * @param bool   $verifyChecksum = true
      *
-     * @throws \MrBeaver1\Selectel\CloudStorage\Exceptions\UploadFailedException
+     * @throws \MrBeaver\Selectel\CloudStorage\Exceptions\UploadFailedException
      *
      * @return string
      */
@@ -123,7 +123,7 @@ interface ContainerContract
      * @param resource $resource Stream resource.
      * @param array    $params   = [] Upload params.
      *
-     * @throws \MrBeaver1\Selectel\CloudStorage\Exceptions\UploadFailedException
+     * @throws \MrBeaver\Selectel\CloudStorage\Exceptions\UploadFailedException
      *
      * @return string
      */

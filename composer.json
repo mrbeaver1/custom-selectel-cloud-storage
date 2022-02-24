@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MrBeaver1\\Selectel\\CloudStorage\\": "src/"
+            "MrBeaver\\Selectel\\CloudStorage\\": "src/"
         }
     },
     "autoload-dev": {
